@@ -22,3 +22,107 @@ header,
 .view {
     height: 100%;
 }
+
+.header-back {
+    position: relative;
+}
+
+.head-bg {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-size: cover;
+    background-color: #242832;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 515px;
+    position: absolute;
+}
+
+
+.head-bg:before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(44, 51, 64, 0.8);
+}
+
+.about {
+    padding-top: 135px;
+}
+
+.about .about-content {
+    padding: 40px 25px 0 25px;
+}
+
+.profile-pic {
+    width: 294px;
+}
+
+.profile-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.profile-list .title {
+    display: block;
+    width: 120px;
+    float: left;
+    color: #333333;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+
+.profile-list .cont {
+    display: block;
+    margin-left: 125px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #9da0a7;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+}
+
+
+.profile-list li {
+    margin-bottom: 13px;
+}
+
+.hello-world {
+	font-size: 11px;
+    margin: 0 10px 10px 0;
+    font-weight: bold;
+}
+
+.dl-resume{
+	margin-left: 0;
+	margin-top: 15px;
+}
+
+.about .card-footer{
+    background-color: #4285F4;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.about .card-footer a{
+    margin-left:20px
+}
