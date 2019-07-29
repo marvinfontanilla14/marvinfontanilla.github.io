@@ -177,3 +177,23 @@ a.linkme {
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
  }
+
+.md-accordion .card .fa-angle-down {
+    float: right;
+}
+
+.md-accordion .card .card-header a:not(.collapsed) .rotate-icon {
+    transform: rotate(180deg);
+}
+.md-accordion .card .fa-angle-down {
+    float: right;
+}
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+} 
+
+
+
+
+
