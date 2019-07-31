@@ -49,7 +49,7 @@ header,
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-color: rgba(44, 51, 64, 0.8);
+	background-color: rgba(59, 86, 138, 0.8);
 }
 
 .about {
@@ -320,4 +320,8 @@ a.linkme {
 .btn-floating i {
     font-size: 1.25rem;
     line-height: 47px;
+}
+
+.top-nav-collapse .nav-item.active>.nav-link {
+    background-color: #3570d2 !important;
 }
