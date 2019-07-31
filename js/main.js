@@ -69,7 +69,7 @@ $(function() {
 
 function sendInquiry () {
 
-    var token = 'f7c9db6a-1123-482b-9eed-cbe861683c94';
+    var token = '5e8e665f-eb60-4ca4-83dc-e2e85b0ca647';
     var from = 'marvinfontanilla020715@gmail.com';
     var to = 'marvinfontanilla14@gmail.com';
     var subj = 'My Portfolio message :';
