@@ -85,7 +85,7 @@ function sendInquiry () {
 
         Email.send(from,
         to,
-        subj+" "+name+" : "+subject+"",
+        subj+" "+name+" :",
         "Email: "+email+" Message: "+message,
         {token: token});
 
