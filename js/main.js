@@ -64,10 +64,10 @@ $(window).scroll(function() {
 
 
 $(function() {
-   sendInquiry();
+    sendInquiry();
 });
 
-function sendInquiry () {
+function sendInquiry() {
 
     var token = 'ba1bf35a-1e0c-4652-8c80-b2e48ee0f4d8';
     var from = 'marvinfontanilla020715@gmail.com';
@@ -77,21 +77,37 @@ function sendInquiry () {
 
 
     $('#formInquiry').submit(function(evt) {
-
         evt.preventDefault();
+
         var name = $('#txtName').val();
         var email = $('#txtEmail').val();
         var message = $('#txtMessage').val();
 
-        Email.send(from,
-        to,
-        subj+" "+name+" :",
-        "Email: "+email+" Message: "+message,
-        {token: token});
+        var data = {
+            service_id: 'gmail',
+            template_id: 'template_CJablVE5',
+            user_id: 'user_pnlByitSjdDJrxAr3VkJS',
+            template_params: {
+            	'from_name' : name,
+                'from_email': email,
+                'message':  message
+            }
+        };
+
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json'
+        }).done(function() {
+            alert("Message has been sent. Thank you!");
+            $('.input').val('');
+        }).fail(function(error) {
+            alert('Oops... ' + JSON.stringify(error));
+            $('.input').val('');
+        });
 
 
-        alert("Message has been sent. Thank you!");
-        $('.input').val('');
+        
     });
 
 }
